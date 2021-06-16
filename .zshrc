@@ -9,8 +9,6 @@ autoload -Uz compinit
 compinit
 
 # user alias
-alias ls="ls -lh --color"
-
 alias g='git'
 alias gfu='git fetch upstream'
 alias gfo='git fetch origin'

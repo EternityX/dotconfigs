@@ -19,7 +19,7 @@ set softtabstop=4 " number of spaces for each tab input
 
 " misc
 set encoding=utf-8
-set updatetime=300
+set updatetime=100
 
 " move between windows easier
 map <C-j> <C-W>j
@@ -28,7 +28,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " nerdtree
-map <F1> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
 
 " minimap
 let g:minimap_highlight = 'Visual'
@@ -40,3 +40,13 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
     set noshowmode
 endif
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
